@@ -23,6 +23,7 @@ def get_const_seq(seq_id):
     st = [0, 0, 0, 0, 1]
     for i in range(62):
         f = st[2] ^ st[4]
+        # LFSRs not in "the usual way"
         if seq_id in (0, 2):
             st[3] ^= st[4]
         elif seq_id in (1, 3):
